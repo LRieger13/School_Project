@@ -1,2 +1,2 @@
-# School_Project
- WBG310 project
+# Bootstrap_Project
+ WBG project learning bootstrap.
