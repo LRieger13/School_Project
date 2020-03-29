@@ -83,7 +83,6 @@ body {
 	align-items: center;
 	display: none;
 }
-
 .modal-content {
 	background-color: #373f27;
 	width: 300px;
@@ -108,6 +107,11 @@ input {
 	display: block;
 	width: 50%;
 	margin: 5px auto;
+}
+.modal-content .result {
+	font-family: 'Josefin', sans-serif;
+	font-size: 10px;
+	color: #cda34f;
 }
 .bg-modal .close {
 	position: absolute;
@@ -140,4 +144,3 @@ input {
 	font-family: artDeco;
 	src: url(ParkLaneNF.ttf);
 }
-
