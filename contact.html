@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+AUTHOR: Leah Rieger
+DATE: 03/29/2020
+PROGRAM DESCRIPTION: Course Project Website WBG310
+-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="practice" content="width=device-width, inital-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "template.css">
+	<link rel = "stylesheet" href = "contact.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans&display=swap" rel="stylesheet">
+	<title>Contact Form</title>
+	<script type="text/javascript">
+		function validateForm() {
+			let name = document.getElementById("name").value;
+			let email = document.getElementById("email").value;
+			
+			// validation for name field
+			if(name == "" || name == null) {
+				resultsMsg("We need your name."); // validation for empty field
+			} else	{
+				if(email == "" || email == null ){
+					resultsMsg("Please enter a email");
+				} else {
+					if(!getContact()) {
+						resultsMsg("Select a type of communication.");
+					} else {
+						resultsMsg("Success " + name + "! Your " + getContact() + " was submitted!");
+					}
+				}
+				
+			}  // end if
+		}  // end function
+		
+		// button group function
+		function getContact() {
+			let isChecked = false; // assuming no button is checked
+			let theSelection;
+			let skills = document.getElementsByName("radio"); // returns array
+			for(let i = 0; i < skills.length; i++) {
+				if(skills[i].checked) {  // checks if attribute is true
+					isChecked = true;
+					theSelection = skills[i].value;
+					break; // leave loop; only 1 can be checked.
+				} // end if
+			} // end loop
+			if(isChecked){
+				return theSelection;
+			} else {
+				return false;
+			} // end else
+		} // end function
+		
+		// message box
+		function resultsMsg(s) {
+			let resultsBox = document.getElementById("results"); // selects div
+			//reset to blank
+			resultsBox.innerHTML = s;
+		} // end function 
+	</script>
+</head>
+<body class="container full-height-grow">
+    <div class="masthead clarfix">
+        <!--NAVBAR-->
+		<!--LOGO-->                              
+		<a class="navbar-brand" href="index.html">
+			<img src="another.png" alt="flapper cartoon illustration" style="width:150px;">
+		</a>     	
+	</div> <!--END HEADER-->
+
+
+	<section class = "contact-main-section">
+		<div class = "call-to-action">
+			<h1 class = "title">Contact Us</h1>
+			<span class = "subtitle">Fill out the form</span>
+		</div> <!-- text content -->
+		<form name="form1" id="form1" action="" method="post">
+			<p>
+				<label>Name:
+					<input type="text" id="name" name="name">
+				</label>
+				<br>
+			</p>
+			<p>
+				<label>Email: &nbsp;
+					<input type="text" id="email" name="email">
+				</label>
+				<br>
+			</p>
+			<p>
+				<input type="radio" name="radio" value="question">Question &nbsp;&nbsp;&nbsp;
+				<input type="radio" name="radio" value="suggestion">Suggestion<br>
+			</p>
+			<p>	
+				<label>Subject: &nbsp;
+					<textarea type="text" id="subject" name="subject"></textarea>
+				</label>
+				<br>
+			</p>
+			<p>
+				<input type="button" value="Submit" onclick="validateForm();"> &nbsp; &nbsp; <input type="reset" value="Clear Form">
+			</p>
+		</form>
+	</section>
+	<div id="results"></div>
+		<!-- want to add in jQuery for circles to move on hover -->
+	<div class = "home-circle1"></div>
+	<div class = "home-circle4"></div>
+</body>
+</html>

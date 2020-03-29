@@ -1,0 +1,143 @@
+/* PROJECT */
+html, body {
+	height: 100%;
+	background-color: #322c2c;
+}
+body {
+	color: #e9e7da;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* CENTER */
+.site-wrapper {
+	display: table;
+	width: 100%;
+	height: 600px;
+	background-color: #322c2c;
+}
+.site-wrapper-inner {
+	display: table-cell;
+	vertical-align: top;
+}
+.cover-container {
+	margin-right: auto;
+	margin-left: auto;
+}
+.inner {
+	padding: 30px;
+}
+
+/* HEADER */
+.masthead-brand {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Josefin', sans-serif;
+}
+.masthead-nav > li {
+	display: inline-block;
+}
+.masthead-nav > li + li {
+	margin-left: 20px;
+}
+.masthead-nav > li > a {
+	padding-right: 0;
+	padding-left: 0;
+	font-size: 16px;
+	font-weight: bold;
+	color: #636b46;
+	text-shadow: none;
+	border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover, 
+.masthead-nav > li > a:focus {
+	background-color: transparent;
+	border-bottom-color: #636b63;
+	border-bottom-color: rgba(205,163,79,.25);
+}  
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #cda34f;
+  border-bottom-color: #cda34f;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+/* MODAL */
+.bg-modal {
+	background-color: #322c2c;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.modal-content {
+	background-color: #373f27;
+	width: 300px;
+	height: 400px;
+	opacity: 1;
+	font-family: 'Josefin Sans', sans-serif;
+	color: #cda34f;
+}
+.modal-content #open {
+	background-color: #322c2c;
+	font-size: x-large;
+	color: #e9e7da;
+	border: 3px double #cda34f;
+	font-family: artDeco;
+}
+.modal-content a {
+	font-size: xx-small;
+	color: #cda34f;
+	text-decoration: none;
+}
+input {
+	display: block;
+	width: 50%;
+	margin: 5px auto;
+}
+.bg-modal .close {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	font-size: 20px;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+/* COVER */
+.cover {
+	padding: 0 20px;
+}
+.cover .btn-lg {
+	padding: 10px 20px;
+	font-weight: bold;
+}
+.cover-heading {
+	font-family: artDeco;
+	font-size: 100px;
+	color: #cda34f;
+}
+.lead {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 25px;
+	color: #636b46;
+}
+@font-face {
+	font-family: artDeco;
+	src: url(ParkLaneNF.ttf);
+}
+

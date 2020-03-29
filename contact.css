@@ -1,0 +1,336 @@
+/* Course Project */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body, html {
+	padding: 0;
+	margin: 0;
+	background-color: #111111;
+	background-size: cover;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.2rem;
+	color: white;
+	min-height: 100vh;  /* min viewheight of screen will be body */
+	position: fixed;
+}
+
+canvas{
+  filter: blur(1px);
+}
+
+.full-height-grow {
+	display: flex;
+	flex-direction: column;
+	/* changes height */
+}
+
+/* LOGO */
+.brand-logo {
+	display: flex;
+	align-items: center;
+	font-size: 1.25em;
+	color: inherit;
+	text-decoration: none;
+	transform: translate(180deg);
+}
+
+.brand-logo-name {
+	margin-left: 1rem;
+}
+
+/* HEADER */
+.main-header {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 130px; /* space from top and underneath */
+}
+
+.container {
+	max-width: 100vw;
+	margin: 0 auto;
+	padding: 0 40px;
+}
+
+.title {
+	font-weight: normal;
+	font-size: 5em;
+	margin-bottom: 1rem;
+	margin-top: 0;
+	font-family: artDeco;
+}
+
+.subtitle {
+	font-weight: 300;
+	font-size: 1.5em;
+	margin-bottom: 2rem;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn {
+	color: black;
+	background-color: #DABF3D;
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+@font-face {
+	font-family: artDeco;
+	src: url(ParkLaneNF.ttf);
+}
+
+/* MAIN HOME */
+.home-main-section {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	flex-grow: 1;
+}
+
+/* IMAGE */
+.home-main-section .img-wrapper {
+	flex-grow: 1;
+	flex-direction: column; /* vertical flex direction to keep at bottom */
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-end;
+}
+
+.image {
+	flex-grow: 1; /* grows to max height of container its inside */
+	max-height: 100%; 
+	min-width: 40vw;
+	padding: 5px;
+	margin-bottom: -450px;
+	background-image: url("flapper.png");
+	background-size: contain; /* no cropping or unnatural scale img */
+	background-repeat: no-repeat;
+	background-position: bottom left; /* push it as close to bottom as possible */
+
+}
+
+.home-main-section .call-to-action {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 1rem;
+	align-self: center; /* aligns it in the middle of the container it is in */
+}
+
+/* IMAGE -- when screen is too small, will remove image & center text */
+@media (max-width: 900px) {
+	.home-main-section .img-wrapper {
+		display: none;
+	}
+	.home-main-section {
+		justify-content: center;
+	}
+}
+
+/* background circles */
+.home-circle1 {
+	position: absolute;
+	width: 15vw;
+	height: 15vw;
+	background-color: rgba(154, 123, 52, .5);
+	border-radius: 50%; /* perfect circle */
+	bottom: 35vw;
+	left: 15vw;
+	border-right: solid 5px rgba(245, 222, 159, .8);
+	border-bottom: solid 5px rgba(245, 222, 159, .8);
+	z-index: -1;
+}
+
+.home-circle2 {
+	position: absolute;
+	width: 10vw;
+	height: 10vw;
+	border-radius: 50%; /* perfect circle */
+	background-color: rgba(104, 122, 109, .3);
+	border-left: solid 5px rgba(245, 222, 159, .6);
+	border-top: solid 5px rgba(245, 222, 159, .6);
+	top: 15vw;
+	left: 40vw;
+	z-index: -1;
+}
+
+.home-circle3 {
+	position: absolute;
+	overflow: hidden;
+	width: 55vw;
+	height: 65vw;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+/*style here: overwrites the parent, so page doesn't scroll*/
+.home-circle3::before {
+	content: '';
+	transform: translate(40%, 40%);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	background-color: rgba(104, 122, 109, .1);
+	border-left: solid 10px rgba(245, 222, 159, .5);
+}
+
+.home-circle4 {
+	position: absolute;
+	width: 50vw;
+	height: 50vw;
+	margin-right: -500px;
+	border-radius: 50%; /* perfect circle */
+	background-color: rgba(104, 122, 109, .2);
+	border-left: solid 5px rgba(245, 222, 159, .6);
+	border-top: solid 5px rgba(245, 222, 159, .6);
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+}
+
+/* FORM PAGE */
+#form1
+{
+	padding: 10px;
+	width: 500px;
+	border-color: #D0C88F;
+	border-style: double;
+	border-width: 15px;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888;
+	background-color: black;
+	margin-left: 70px;
+	margin-right: 50px;
+	margin-top: 100px;
+}
+
+form  { 
+	display: table;
+}
+p     { 
+	display: table-row;  
+	
+}
+label { 
+	display: table-cell; 
+	text-align: left; 
+	margin: 10px;
+}
+input { 
+	display: table-cell;  
+	margin: 10px;
+}
+	
+textarea { 
+	display: table-row; 
+	padding: 5px;
+	margin: 5px;
+}
+
+input[type=button] {
+	background-color: rgba(104, 122, 109);
+	color: white;
+	padding: 10px;
+	margin: 5px;
+	border: double 10px #D0C88F;
+	cursor: crosshair;
+	font-family: artDeco;
+	font-size: 40px;
+}
+input[type=reset] {
+	background-color: brown;
+	color: white;
+	padding: 10px;
+	margin: 5px;
+	border: double 5px #D0C88F;
+	cursor: crosshair;
+	font-family: artDeco;
+	font-size: 20px;
+}
+#results {
+	background-color: #000;
+	color: white;
+	height:auto;
+	width:auto;
+	border:5px solid #D0C88F;
+	padding:10px;
+	margin:20px;
+	margin-left: 50px;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888;
+	text-align: center;
+}
+
+
+/* CONTACT */
+.contact-main-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-grow: 1;
+}
+
+.contact-main-section .container {
+	border-radius: 5px;
+	background-color: transparent;
+	padding: 10px;
+	width: 100vw;
+	height: 100vh;
+	margin-bottom: 50px;
+}
+
+
+.contact-main-section:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+/* IMAGE */
+.contact-main-section .img-wrapper {
+	flex-grow: 1;
+	flex-direction: column; /* vertical flex direction to keep at bottom */
+	display: flex;
+	align-items: stretch;
+	justify-content: flex-end;
+}
+ .image {
+	flex-grow: 1; /* grows to max height of container its inside */
+	max-height: 100vh; 
+	min-width: 40vw;
+	padding: 5px;
+	background-image: url("mirror.png");
+	background-size: contain; /* no cropping or unnatural scale img */
+	background-repeat: no-repeat;
+	background-position: bottom left; /* push it as close to bottom as possible */
+
+}
+
+.contact-main-section .call-to-action {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 1rem;
+	align-self: center; /* aligns it in the middle of the container it is in */
+}
+
+/* IMAGE -- when screen is too small, will remove image & center text */
+@media (max-width: 900px) {
+	.contact-main-section .img-wrapper {
+		display: none;
+	}
+	.contact-main-section {
+		justify-content: center;
+	}
+}
