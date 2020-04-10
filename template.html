@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+AUTHOR: Leah Rieger
+DATE: 03/12/2020
+PROGRAM DESCRIPTION: Course Project Website WBG310
+-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="practice" content="width=device-width, inital-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel = "stylesheet" href = "template.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans&display=swap" rel="stylesheet">
+	<title>Practice</title>
+</head>
+<body class="container full-height-grow">
+	<header class = "main-header">
+		<!-- Insert Logo -->
+		<div class = "brand-logo-name"></div>
+		<div class="icon-bar">
+		  <a class="active" href="#"><i class="fa fa-home"></i></a> 
+		  <a href="#"><i class="fa fa-search"></i></a> 
+		  <a href="contact.html"><i class="fa fa-envelope"></i></a> 
+		  <a href="#"><i class="fa fa-globe"></i></a> 
+		</div>
+	</header>
+	<section class = "home-main-section">
+		<div class = "img-wrapper"></div> <!-- Image -->
+			<div class = "image"></div>
+		<div class = "call-to-action">
+			<h1 class = "title">Title</h1>
+			<span class = "subtitle">Subtitle</span>
+			<button onclick="#"><img src="">Button</button> <!-- change image background of btn -->
+		</div> <!-- text content -->
+	</section>
+	<!-- want to add in jQuery for circles to move on hover -->
+	<div class = "home-circle1"></div>
+	<div class = "home-circle2"></div>
+	<div class = "home-circle3"></div>
+	<canvas id="canvas"></canvas>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+let c = init("canvas"),
+  w = (canvas.width = window.innerWidth),
+  h = (canvas.height = window.innerHeight);
+//initiation
+
+class firefly{
+  constructor(){
+    this.x = Math.random()*w;
+    this.y = Math.random()*h;
+    this.s = Math.random()*2;
+    this.ang = Math.random()*2*Math.PI;
+    this.v = this.s*this.s/4;
+  }
+  move(){
+    this.x += this.v*Math.cos(this.ang);
+    this.y += this.v*Math.sin(this.ang);
+    this.ang += Math.random()*20*Math.PI/180-10*Math.PI/180;
+  }
+  show(){
+    c.beginPath();
+    c.arc(this.x,this.y,this.s,0,2*Math.PI);
+    c.fillStyle="#fddba3";
+    c.fill();
+  }
+}
+
+let f = [];
+
+function draw() {
+  if(f.length < 100){
+    for(let j = 0; j < 10; j++){
+     f.push(new firefly());
+  }
+     }
+  //animation
+  for(let i = 0; i < f.length; i++){
+    f[i].move();
+    f[i].show();
+    if(f[i].x < 0 || f[i].x > w || f[i].y < 0 || f[i].y > h){
+       f.splice(i,1);
+       }
+  }
+}
+
+let mouse = {};
+let last_mouse = {};
+
+canvas.addEventListener(
+  "mousemove",
+  function(e) {
+    last_mouse.x = mouse.x;
+    last_mouse.y = mouse.y;
+
+    mouse.x = e.pageX - this.offsetLeft;
+    mouse.y = e.pageY - this.offsetTop;
+  },
+  false
+);
+function init(elemid) {
+  let canvas = document.getElementById(elemid),
+    c = canvas.getContext("2d"),
+    w = (canvas.width = window.innerWidth),
+    h = (canvas.height = window.innerHeight);
+  c.fillStyle = "rgba(30,30,30,1)";
+  c.fillRect(0, 0, w, h);
+  return c;
+}
+
+window.requestAnimFrame = (function() {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(callback) {
+      window.setTimeout(callback);
+    }
+  );
+});
+
+function loop() {
+  window.requestAnimFrame(loop);
+  c.clearRect(0, 0, w, h);
+  draw();
+}
+
+window.addEventListener("resize", function() {
+  (w = canvas.width = window.innerWidth),
+  (h = canvas.height = window.innerHeight);
+  loop();
+});
+
+loop();
+setInterval(loop, 1000 / 60);
+</script>
+</body>
+</html>
