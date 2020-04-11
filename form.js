@@ -1,7 +1,9 @@
-// LOGO
-// make contact logo bounce in for animation
-$(document).ready(function() {
-    window.onload = function() {$('#logo').delay(500).fadeIn(2000);};
+// CONTACT MODAL
+document.getElementById("button").addEventListener('click', function () {
+    document.querySelector('.contact-modal').style.display = 'flex';
+});
+document.querySelector(".close").addEventListener('click', function () {
+    document.querySelector('.contact-modal').style.display = 'none';
 });
 
 

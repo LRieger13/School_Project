@@ -6,10 +6,10 @@ RESTRUCTURE.
 
 html, body {
 	height: 100%;
-	background-color: #322c2c;
+	background-color: #0d1018;
 }
 body {
-	color: #e9e7da;
+	color: #fbeade;
 	text-align: center;
 	text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
@@ -19,7 +19,7 @@ body {
 	display: table;
 	width: 100%;
 	height: 600px;
-	background-color: #322c2c;
+	background-color: #0d1018;
 }
 .site-wrapper-inner {
 	display: table-cell;
@@ -50,21 +50,21 @@ body {
 	padding-left: 0;
 	font-size: 16px;
 	font-weight: bold;
-	color: #636b46;
+	color: #347484;
 	text-shadow: none;
 	border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover, 
 .masthead-nav > li > a:focus {
 	background-color: transparent;
-	border-bottom-color: #636b63;
-	border-bottom-color: rgba(205,163,79,.25);
+	border-bottom-color: #347484;
+	border-bottom-color: rgba(97,127,141,.25);
 }  
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-  color: #cda34f;
-  border-bottom-color: #cda34f;
+  color: #617f8d;
+  border-bottom-color: #617f8d;
 }
 
 @media (min-width: 768px) {
@@ -78,7 +78,8 @@ body {
 
 /* MODAL */
 .bg-modal {
-	background-color: #322c2c;
+	background-color: rgba(182,124,0,0.8);
+	backdrop-filter: blur(8px);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -89,23 +90,40 @@ body {
 	display: none;
 }
 .modal-content {
-	background-color: #373f27;
+	background-color: #122d17;
 	width: 300px;
 	height: 400px;
 	opacity: 1;
 	font-family: 'Josefin Sans', sans-serif;
-	color: #cda34f;
+	color: #654321;
 }
 .modal-content #open {
-	background-color: #322c2c;
+	background-color: #122d17;
 	font-size: x-large;
-	color: #e9e7da;
-	border: 3px double #cda34f;
+	color: #ba8623;
+	border-top: none;
+	border-right: none;
+	border-left: none; 
+	border-bottom: 5px double rgba(182,124,0,0.8);
 	font-family: artDeco;
+}
+.modal-content #open:hover {
+	transform: scale(1.1);
+	transition: all ease 500ms;
+}
+.modal-content h2 {
+	color: #ba8623;
+	font-family: artDeco;
+	letter-spacing: 2px;
 }
 .modal-content a {
 	font-size: xx-small;
-	color: #cda34f;
+	color: #cc7d63;
+	text-decoration: none;
+}
+.modal-content a:hover {
+	font-size: xx-small;
+	color: #fbeade;
 	text-decoration: none;
 }
 input {
@@ -115,8 +133,11 @@ input {
 }
 .modal-content .result {
 	font-family: 'Josefin', sans-serif;
-	font-size: 10px;
-	color: #cda34f;
+	text-shadow: none;
+	font-size: 11px;
+	font-weight: bold;
+	color: #3d434b;
+	padding-top: 3px;
 }
 .bg-modal .close {
 	position: absolute;
@@ -138,14 +159,18 @@ input {
 .cover-heading {
 	font-family: artDeco;
 	font-size: 100px;
-	color: #cda34f;
+	color: #f9da5c;
 }
 .lead {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 25px;
-	color: #636b46;
+	color: #347484;
 }
 @font-face {
 	font-family: artDeco;
 	src: url(ParkLaneNF.ttf);
+}
+
+.lead a {
+	color: #cc7d63;
 }

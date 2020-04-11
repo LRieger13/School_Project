@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!--PERSONAL CSS-->
     <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="contactUs.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/6bb03a50c0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="site-wrapper">
@@ -21,11 +23,11 @@
             <div class="container">
                 <div class="masthead clarfix">
                     <div class="container inner">
-                        <img class="masthead-brand" src="another.png" style="width:100px;">
+                        <img class="masthead-brand" src="another.png" id="logo" alt="flapper cartoon illustration" style="width:100px; display: none;">
                         <nav>
                             <ul class="nav masthead-nav">
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="contactUs.html">Contact </a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active"><a href="contactUs.html">Contact </a></li>
                                 <li><a href="gallery.html">Gallery </a></li>
                             </ul><!--END OTHER LINKS-->
                         </nav>
@@ -33,13 +35,11 @@
                 </div> <!--END MASTHEAD-->
                 <!--BANNER / CAROUSEL / BODY-->
                 <div class="inner cover">
-                    <h1 class="cover-heading">Leah Rieger</h1>
-                    <p class="lead">Animations: 
-                        <br> 1.) Click the button below to see a login modal. 
-                        <br> 2.) Check out the contact page for the logo fade in.
+                    <h1 class="cover-heading">Contact Us</h1>
+                    <p class="lead">Fill out the form: 
                     </p>
                     <p class="lead">
-                        <a href="#" id="button" class="btn btn-lg btn-default">Click Me</a> <!--CONNECT TO CONTACT?-->
+                        <a href="#" id="button" class="telegram"><i class="fas fa-paper-plane"></i></a> <!--CONNECT TO CONTACT?-->
                     </p>
                 </div>
 
@@ -47,16 +47,21 @@
         </div> <!--END INNER WRAP-->
     </div> <!--END SITE WRAPPER-->
 
-    <div class="bg-modal">
-        <div class="modal-content">
+    <div class="contact-modal">
+        <div class="contact-modal-content">
             <div class="close">+</div>
             <img src="another.png" style="width: 150px;">
-            <h2>LOGIN</h2>
-            <form>
+            <h2>Contact Us:</h2>
+            <form name="form1" id="form1" action="" method="post">
                 <input type="text" id="name" name="name" placeholder="Name">
                 <input type="text" id="email" name="email" placeholder="Email">
                 <br>
-                <input id="open" type="button" value="Submit" onclick="login();"> &nbsp; &nbsp; <input type="reset" value="Clear Form">
+                <textarea type="text" id="subject" name="subject" placeholder="Subject"></textarea>
+                <p>
+                    <input type="button" value="Submit" onclick="validateForm();" class="frmBtn"> 
+                    <br>
+                    <input type="reset" class="reset" value="Clear Form">
+                </p>
             </form>
             <p class="result"><br>
             <a href="#">Register</h6>
@@ -71,5 +76,11 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="form.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#logo").fadeIn(2000);
+        });
+    </script>
 </body>
 </html>
