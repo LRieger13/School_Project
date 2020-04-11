@@ -159,7 +159,7 @@ input {
 .cover-heading {
 	font-family: artDeco;
 	font-size: 100px;
-	color: #f9da5c;
+	color: #eebb22;
 }
 .lead {
 	font-family: 'Josefin Sans', sans-serif;
@@ -174,3 +174,5 @@ input {
 .lead a {
 	color: #cc7d63;
 }
+
+/* NAV */

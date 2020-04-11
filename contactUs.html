@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Project Template Home</title>
+    <title>Project Template Contact Form</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="contactUs.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/6bb03a50c0.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+	<link href="smartmenus/sm-core-css.css" rel="stylesheet">
+    <link href="smartmenus/sm-blue.css" rel="stylesheet">
 </head>
 <body>
     <div class="site-wrapper">
@@ -24,13 +26,21 @@
                 <div class="masthead clarfix">
                     <div class="container inner">
                         <img class="masthead-brand" src="another.png" id="logo" alt="flapper cartoon illustration" style="width:100px; display: none;">
-                        <nav>
-                            <ul class="nav masthead-nav">
-                                <li><a href="index.html">Home</a></li>
-                                <li class="active"><a href="contactUs.html">Contact </a></li>
-                                <li><a href="gallery.html">Gallery </a></li>
-                            </ul><!--END OTHER LINKS-->
-                        </nav>
+                         <!-- NAV -->
+                        <ul class="sm sm-blue">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="contactUs.html">Contact</a></li>
+                            <li><a href="#">Blog</a></li>
+                            
+                            <li><a href="#">Gallery</a>
+                            <ul>
+                                <li><a href="gallery.html">Gallery Page (option a)</a></li>
+                                <li><a href="#">Favorites Page (option b)</a></li>
+                            </ul>
+                            </li>
+                        </ul> 
+                    </nav>
                     </div> <!--END INNERCONTANER-->
                 </div> <!--END MASTHEAD-->
                 <!--BANNER / CAROUSEL / BODY-->
@@ -56,7 +66,7 @@
                 <input type="text" id="name" name="name" placeholder="Name">
                 <input type="text" id="email" name="email" placeholder="Email">
                 <br>
-                <textarea type="text" id="subject" name="subject" placeholder="Subject"></textarea>
+                <textarea rows="5" cols="25" maxlength="300" type="text" id="subject" name="subject" placeholder="Subject"></textarea>
                 <p>
                     <input type="button" value="Submit" onclick="validateForm();" class="frmBtn"> 
                     <br>
@@ -75,12 +85,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6bb03a50c0.js" crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <script src="form.js"></script>
+    <script src="smartmenus/jquery.smartmenus.min.js"></script>
     <script>
         $(document).ready(function () {
             $("#logo").fadeIn(2000);
+
+            $('.sm').smartmenus({
+                
+                showFunction: function($ul, complete)
+                    { $ul.slideDown(250, complete); },
+                
+                hideFunction: function($ul, complete)
+                    { $ul.slideUp(250, complete); }
+            
+            }); // end smartmenus
         });
     </script>
 </body>
 </html>
+

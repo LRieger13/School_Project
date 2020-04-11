@@ -6,6 +6,8 @@
 }
 
 /* MODAL */
+/* tried to limit size of text area expansion -- couldn't figure out how
+    moved onto the rest of the requirements */
 .contact-modal {
     background-color: rgba(182,124,0,0.8);
     backdrop-filter: blur(8px);
@@ -56,6 +58,12 @@ input {
 	font-size: 20px;
 	transform: rotate(45deg);
 	cursor: pointer;
+}
+.contact-modal .subject {
+    width: 100%;
+    min-height: 5em;
+    max-height: 50vh;
+    overflow: hidden;
 }
 
 .contact-modal .frmBtn {

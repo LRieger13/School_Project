@@ -1,20 +1,33 @@
 <!DOCTYPE html>
+<!--
+AUTHOR: Leah Rieger
+DATE: 04/11/2020
+PROGRAM DESCRIPTION: Course Project Website WBG310
+-->
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Project Template Home</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!--PERSONAL CSS-->
-    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- FONTS / ICONS -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--PERSONAL CSS-->
+    <link rel="stylesheet" href="template.css">
+    <!-- CSS -->
+    <link href="smartmenus/sm-core-css.css" rel="stylesheet">
+    <link href="smartmenus/sm-blue.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="site-wrapper">
         <div class="site-wrapper-inner">
@@ -22,30 +35,43 @@
                 <div class="masthead clarfix">
                     <div class="container inner">
                         <img class="masthead-brand" src="another.png" style="width:100px;">
-                        <nav>
-                            <ul class="nav masthead-nav">
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="contactUs.html">Contact </a></li>
-                                <li><a href="gallery.html">Gallery </a></li>
-                            </ul><!--END OTHER LINKS-->
-                        </nav>
-                    </div> <!--END INNERCONTANER-->
-                </div> <!--END MASTHEAD-->
+                        <!-- NAV -->
+                        <ul class="sm sm-blue">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="contactUs.html">Contact</a></li>
+                            <li><a href="#">Blog</a></li>
+
+                            <li><a href="#">Gallery</a>
+                                <ul>
+                                    <li><a href="gallery.html">Gallery Page (option a)</a></li>
+                                    <li><a href="#">Favorites Page (option b)</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--END INNERCONTANER-->
+                </div>
+                <!--END MASTHEAD-->
                 <!--BANNER / CAROUSEL / BODY-->
                 <div class="inner cover">
                     <h1 class="cover-heading">Leah Rieger</h1>
-                    <p class="lead">Animations: 
-                        <br> 1.) Click the button below to see a login modal. 
+                    <p class="lead">Animations:
+                        <br> 1.) Click the button below to see a login modal.
                         <br> 2.) Check out the contact page for the logo fade in.
                     </p>
                     <p class="lead">
-                        <a href="#" id="button" class="btn btn-lg btn-default">Click Me</a> <!--CONNECT TO CONTACT?-->
+                        <a href="#" id="button" class="btn btn-lg btn-default">Click Me</a>
+                        <!--CONNECT TO CONTACT?-->
                     </p>
                 </div>
 
-            </div> <!--END CONTANER-->
-        </div> <!--END INNER WRAP-->
-    </div> <!--END SITE WRAPPER-->
+            </div>
+            <!--END CONTANER-->
+        </div>
+        <!--END INNER WRAP-->
+    </div>
+    <!--END SITE WRAPPER-->
 
     <div class="bg-modal">
         <div class="modal-content">
@@ -56,20 +82,38 @@
                 <input type="text" id="name" name="name" placeholder="Name">
                 <input type="text" id="email" name="email" placeholder="Email">
                 <br>
-                <input id="open" type="button" value="Submit" onclick="login();"> &nbsp; &nbsp; <input type="reset" value="Clear Form">
+                <input id="open" type="button" value="Submit" onclick="login();"> &nbsp; &nbsp; <input type="reset"
+                    value="Clear Form">
             </form>
             <p class="result"><br>
-            <a href="#">Register</h6>
+                <a href="#">Register</h6>
             </p>
         </div>
     </div>
 
-
-
     <!--JQUERY CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="main.js" rel="stylesheet "></script>
+    <!-- jQuery -->
+    <script src="https://kit.fontawesome.com/6bb03a50c0.js" crossorigin="anonymous"></script>
+    <script src="smartmenus/jquery.smartmenus.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sm').smartmenus({
+
+                showFunction: function ($ul, complete) { $ul.slideDown(250, complete); },
+
+                hideFunction: function ($ul, complete) { $ul.slideUp(250, complete); }
+
+            }); // end smartmenus
+
+        }); // end ready
+
+    </script>
 </body>
+
 </html>

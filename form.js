@@ -1,4 +1,4 @@
-// CONTACT MODAL
+/// CONTACT MODAL
 document.getElementById("button").addEventListener('click', function () {
     document.querySelector('.contact-modal').style.display = 'flex';
 });
@@ -7,7 +7,7 @@ document.querySelector(".close").addEventListener('click', function () {
 });
 
 
-// VALIDATE FORM
+/// VALIDATE FORM
 function validateForm() {
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
