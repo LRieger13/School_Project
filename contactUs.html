@@ -65,25 +65,14 @@
                             <input type="text" id="name" name="name" placeholder="Name">
                             <input type="text" id="email" name="email" placeholder="Email">
                             <br>
-                            <textarea rows="8" cols="50" maxlength="300" type="text" id="subject" name="subject"
+                            <textarea maxlength="300" type="text" id="subject" name="subject"
                                 placeholder="Subject"></textarea>
-                            <div class="indent">
-                                <p class="labelBlock">Subscribe?</p>
-                                <input type="radio" name="spam" id="yes" value="yes" class="required"
-                                    title="Subscribe?">
-                                <label for="yes">Yes</label>
-                                <input type="radio" name="spam" id="no" value="no">
-                                <label for="definitely">No</label>
-                            </div>
                             <p class="buttons">
-                                <input id="open" type="button" value="Submit" onclick="login();" class="frmBtn">
+                                <input id="open" type="submit" value="Submit">
                                 <br>
                                 <input type="reset" class="reset" value="Clear Form">
                             </p>
                         </form>
-                        <p class="result"><br>
-                            <a href="#">ERROR</h6>
-                        </p>
                     </div>
 
                 </div>
@@ -102,8 +91,6 @@
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/6bb03a50c0.js" crossorigin="anonymous"></script>
-        <script src="main.js"></script>
-        <script src="form.js"></script>
         <script src="jquery_validate/jquery.validate.min.js"></script> <!-- Validator jQUERY -->
         <script src="smartmenus/jquery.smartmenus.min.js"></script>
         <script>
@@ -117,6 +104,34 @@
                     hideFunction: function ($ul, complete) { $ul.slideUp(250, complete); }
 
                 }); // end smartmenus
+
+                /// VALIDATE
+                $('#form1').validate({
+                    rules:
+                    {
+                        name: { required: true, name: true }, // end name
+                        email: { required: true, email: true }, // end email
+                        subject: { required: true, subject: true }, // end textarea
+                        spam: "required"
+                    }, // end rules
+
+                    messages:
+                    {
+                        name: { required: "Please provide your name.", name: "What do they call you  'ol Sport?" }, // end name
+                        email: { required: "Please provide your email address for a reply.", email: "This is not a valid email address." }, // end email
+                        subject: { required: "Please provide your comment / request." } // end subject
+                    },
+
+
+                }); // end validate
+
+                // message box
+                function resultMsg(s) {
+                    let result = document.querySelector('.result'); // selects div
+                    //reset to blank
+                    result.innerHTML = s;
+
+                } // end function
 
 
             }); // end rdy

@@ -164,7 +164,7 @@ input {
 .lead {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 25px;
-	color: #347484;
+	color: #ba8623;
 }
 @font-face {
 	font-family: artDeco;
@@ -173,6 +173,14 @@ input {
 
 .lead a {
 	color: #cc7d63;
+}
+.lead dt {
+	font-size: x-large;
+	color: #ba5705;
+}
+.lead dl {
+	font-size: small;
+	color: #b8b8b8;
 }
 
 /* NAV */

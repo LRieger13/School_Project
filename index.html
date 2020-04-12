@@ -34,7 +34,8 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
             <div class="container">
                 <div class="masthead clarfix">
                     <div class="container inner">
-                        <img class="masthead-brand" src="another.png"  id="logo" alt="flapper cartoon illustration" style="width:100px; display: none;">
+                        <img class="masthead-brand" src="another.png" id="logo" alt="flapper cartoon illustration"
+                            style="width:100px; display: none;">
                         <!-- NAV -->
                         <ul class="sm sm-blue">
                             <li><a href="index.html">Home</a></li>
@@ -56,12 +57,20 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
                 <!--BANNER / CAROUSEL / BODY-->
                 <div class="inner cover">
                     <h1 class="cover-heading">Leah Rieger</h1>
-                    <p class="lead">Animations:
-                        <br> 1.) Click the button below to see a login modal.
-                        <br> 2.) Check out the contact page for the logo fade in.
-                    </p>
+                    <dl class="lead">Requirements:
+                        <dt>Home Page</dt>
+                        <dl>Click the button below to see a login modal.</dl>
+                        <dl>Pay attention to hover effect.</dl>
+                       
+                        <dt>Contact Page</dt>
+                        <dl>Keep an eye on that logo! </dl>
+                        <dl>Form & new validation</dl>
+                        
+                        <dt>Gallery Page</dt>
+                        <dl>Check out that fancybox!</dl>
+                    </dl>
                     <p class="lead">
-                        <a href="#" id="button" class="btn btn-lg btn-default">Click Me</a>
+                        <a href="#" id="button" onclick="loginBox();" class="btn btn-lg btn-default">Click Me</a>
                         <!--CONNECT TO CONTACT?-->
                     </p>
                 </div>
@@ -90,21 +99,19 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
             </p>
         </div>
     </div>
-
     <!--JQUERY CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script src="main.js" rel="stylesheet "></script>
     <!-- jQuery -->
     <script src="https://kit.fontawesome.com/6bb03a50c0.js" crossorigin="anonymous"></script>
     <script src="smartmenus/jquery.smartmenus.min.js"></script>
     <script>
         $(document).ready(function () {
             $("#logo").fadeIn(2000);
-            
+
             $('.sm').smartmenus({
 
                 showFunction: function ($ul, complete) { $ul.slideDown(250, complete); },
@@ -113,9 +120,17 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
 
             }); // end smartmenus
 
-        }); // end ready
+            /// CONTACT MODAL 
 
+            document.getElementById("button").addEventListener('click', function () {
+                document.querySelector('.bg-modal').style.display = 'flex';
+            });
+            document.querySelector(".close").addEventListener('click', function () {
+                document.querySelector('.bg-modal').style.display = 'none';
+            });
+        });
     </script>
+
 </body>
 
 </html>

@@ -1,11 +1,12 @@
-/// CONTACT MODAL
+/// CONTACT MODAL 
+/* 
 document.getElementById("button").addEventListener('click', function () {
     document.querySelector('.contact-modal').style.display = 'flex';
 });
 document.querySelector(".close").addEventListener('click', function () {
     document.querySelector('.contact-modal').style.display = 'none';
 });
-/* 
+
 
 /// VALIDATE FORM 
 function validateForm() {
@@ -53,6 +54,42 @@ function resultsMsg(s) {
     let resultsBox = document.getElementById("results"); // selects div
     //reset to blank
     resultsBox.innerHTML = s;
+
+} // end function
+
+/// MODAL
+loginBox();
+
+$(':text:first').focus();
+
+function loginBox() {
+    
+}
+
+/// VALIDATE LOGIN
+function login() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    // validate input field
+    // validation for name field
+    if (name == "") {
+        resultMsg("We need your name."); // validation for empty field
+    } else if (email == "") {
+        resultMsg("Please enter a email");
+    } else {
+        resultMsg("Success " + name + "! Welcome back");
+    } // end if
+
+    
+
+} // end function
+
+// message box
+function resultMsg(s) {
+    let result = document.querySelector('.result'); // selects div
+    //reset to blank
+    result.innerHTML = s;
 
 } // end function
 

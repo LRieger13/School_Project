@@ -42,8 +42,12 @@
 	background-color: transparent;
 	font-size: x-large;
 	color: #eebb22;
+	border-top: none;
+	margin-top: 50px;
 	border: 5px double #f9da5c;
 	font-family: artDeco;
+	width: 50%;
+
 }
 .contact-modal-content a {
 	font-size: xx-small;
@@ -51,7 +55,7 @@
 	text-decoration: none;
 }
 input {
-	display: inline-block;
+	display: inline;
 	width: 20%;
 	margin-bottom: 15px;
 	margin: 10px;
@@ -75,61 +79,38 @@ input {
 	width: 600px;
 	margin-bottom: 15px;
 	margin: 10px;
-    overflow: auto;
+	overflow: auto;
+	padding: 5px;
+	justify-content: center;
 }
-.contact-modal .frmBtn {
-    font-family: artDeco;
-    font-size: 25px;
-    font-weight: normal;
-    color: #f9da5c;
-    padding: 10px 20px;
-	width: 30px;
-	margin-top: 50px;
-	margin-left: 500px;
-    background-color: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 5px double #b67c00;
-}
-.contact-modal .reset {
+
+.contact-modal-content .reset {
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     font-size: 10px;
     font-weight: bold;
-    color: #b67c00;
-	width: 50px;
+	color: #1c1c49;
+	width: 65px;
 	display: flex;
 	position: absolute;
+	justify-content: center;
+	align-items: center;
+}
+textarea {
+	width: 50%;
+	height: 75%;
+	margin: 10px;
 }
 
-#labelBlock {
-	text-transform: uppercase;
-	font-weight: bold;	
-	display: block;
-	padding-bottom: 0 !important;
-	clear: both;
-	margin-top: 10px;
-}
-.contact-modal-content .indent {
-	display: block;
-	border: 2px solid #f9da5c;
-	margin: 100px;
-	width: 200px;
-	margin-top: -200px;
+.contact-modal-content .buttons {
+	display: inline-flex !important;
+	width: 50%;
+	margin-bottom: 100px;
 	clear: both;
 	color: #eebb22;
-	text-transform: uppercase;
-	font-weight: bold;	
-	display: block;
-	clear: both;
-}
-.contact-modal-content .button {
-	display: block;
-	margin-bottom: 200px;
-	clear: both;
-	color: #eebb22;
-	display: block;
+	position: relative;
+	justify-content: center;
+	align-items: right;
 	clear: both;
 }
 
