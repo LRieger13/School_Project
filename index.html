@@ -34,7 +34,7 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
             <div class="container">
                 <div class="masthead clarfix">
                     <div class="container inner">
-                        <img class="masthead-brand" src="another.png" style="width:100px;">
+                        <img class="masthead-brand" src="another.png"  id="logo" alt="flapper cartoon illustration" style="width:100px; display: none;">
                         <!-- NAV -->
                         <ul class="sm sm-blue">
                             <li><a href="index.html">Home</a></li>
@@ -103,6 +103,8 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
     <script src="smartmenus/jquery.smartmenus.min.js"></script>
     <script>
         $(document).ready(function () {
+            $("#logo").fadeIn(2000);
+            
             $('.sm').smartmenus({
 
                 showFunction: function ($ul, complete) { $ul.slideDown(250, complete); },

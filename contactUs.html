@@ -1,109 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Project Template Contact Form</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!--PERSONAL CSS-->
     <link rel="stylesheet" href="template.css">
     <link rel="stylesheet" href="contactUs.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS -->
-	<link href="smartmenus/sm-core-css.css" rel="stylesheet">
+    <link href="smartmenus/sm-core-css.css" rel="stylesheet">
     <link href="smartmenus/sm-blue.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="site-wrapper">
         <div class="site-wrapper-inner">
             <div class="container">
                 <div class="masthead clarfix">
                     <div class="container inner">
-                        <img class="masthead-brand" src="another.png" id="logo" alt="flapper cartoon illustration" style="width:100px; display: none;">
-                         <!-- NAV -->
+                        <img class="masthead-brand" src="another.png" id="logo" alt="flapper cartoon illustration"
+                            style="width:100px; display: none;">
+                        <!-- NAV -->
                         <ul class="sm sm-blue">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="contactUs.html">Contact</a></li>
                             <li><a href="#">Blog</a></li>
-                            
+
                             <li><a href="#">Gallery</a>
-                            <ul>
-                                <li><a href="gallery.html">Gallery Page (option a)</a></li>
-                                <li><a href="#">Favorites Page (option b)</a></li>
-                            </ul>
+                                <ul>
+                                    <li><a href="gallery.html">Gallery Page (option a)</a></li>
+                                    <li><a href="#">Favorites Page (option b)</a></li>
+                                </ul>
                             </li>
-                        </ul> 
-                    </nav>
-                    </div> <!--END INNERCONTANER-->
-                </div> <!--END MASTHEAD-->
+                        </ul>
+                        </nav>
+                    </div>
+                    <!--END INNERCONTANER-->
+                </div>
+                <!--END MASTHEAD-->
                 <!--BANNER / CAROUSEL / BODY-->
                 <div class="inner cover">
                     <h1 class="cover-heading">Contact Us</h1>
-                    <p class="lead">Fill out the form: 
+                    <p class="lead">EXTRA EXTRA!! Fill out the form:
                     </p>
+                    <!--
                     <p class="lead">
-                        <a href="#" id="button" class="telegram"><i class="fas fa-paper-plane"></i></a> <!--CONNECT TO CONTACT?-->
-                    </p>
+                        <a href="#" id="button" class="telegram"><i class="fas fa-paper-plane"></i></a>
+                        CONNECT TO CONTACT?
+                    </p>-->
+                    <div class="contact-modal-content">
+                        <form name="form1" id="form1" action="" method="post">
+                            <input type="text" id="name" name="name" placeholder="Name">
+                            <input type="text" id="email" name="email" placeholder="Email">
+                            <br>
+                            <textarea rows="8" cols="50" maxlength="300" type="text" id="subject" name="subject"
+                                placeholder="Subject"></textarea>
+                            <div class="indent">
+                                <p class="labelBlock">Subscribe?</p>
+                                <input type="radio" name="spam" id="yes" value="yes" class="required"
+                                    title="Subscribe?">
+                                <label for="yes">Yes</label>
+                                <input type="radio" name="spam" id="no" value="no">
+                                <label for="definitely">No</label>
+                            </div>
+                            <p class="buttons">
+                                <input id="open" type="button" value="Submit" onclick="login();" class="frmBtn">
+                                <br>
+                                <input type="reset" class="reset" value="Clear Form">
+                            </p>
+                        </form>
+                        <p class="result"><br>
+                            <a href="#">ERROR</h6>
+                        </p>
+                    </div>
+
                 </div>
 
-            </div> <!--END CONTANER-->
-        </div> <!--END INNER WRAP-->
-    </div> <!--END SITE WRAPPER-->
-
-    <div class="contact-modal">
-        <div class="contact-modal-content">
-            <div class="close">+</div>
-            <img src="another.png" style="width: 150px;">
-            <h2>Contact Us:</h2>
-            <form name="form1" id="form1" action="" method="post">
-                <input type="text" id="name" name="name" placeholder="Name">
-                <input type="text" id="email" name="email" placeholder="Email">
-                <br>
-                <textarea rows="5" cols="25" maxlength="300" type="text" id="subject" name="subject" placeholder="Subject"></textarea>
-                <p>
-                    <input type="button" value="Submit" onclick="validateForm();" class="frmBtn"> 
-                    <br>
-                    <input type="reset" class="reset" value="Clear Form">
-                </p>
-            </form>
-            <p class="result"><br>
-            <a href="#">Register</h6>
-            </p>
+                <!--END CONTANER-->
+            </div>
+            <!--END INNER WRAP-->
         </div>
-    </div>
+        <!--END SITE WRAPPER-->
 
 
+        <!--JQUERY CDN-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/6bb03a50c0.js" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <script src="form.js"></script>
+        <script src="jquery_validate/jquery.validate.min.js"></script> <!-- Validator jQUERY -->
+        <script src="smartmenus/jquery.smartmenus.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#logo").fadeIn(2000);
 
-    <!--JQUERY CDN-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/6bb03a50c0.js" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-    <script src="form.js"></script>
-    <script src="smartmenus/jquery.smartmenus.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#logo").fadeIn(2000);
+                $('.sm').smartmenus({
 
-            $('.sm').smartmenus({
-                
-                showFunction: function($ul, complete)
-                    { $ul.slideDown(250, complete); },
-                
-                hideFunction: function($ul, complete)
-                    { $ul.slideUp(250, complete); }
-            
-            }); // end smartmenus
-        });
-    </script>
+                    showFunction: function ($ul, complete) { $ul.slideDown(250, complete); },
+
+                    hideFunction: function ($ul, complete) { $ul.slideUp(250, complete); }
+
+                }); // end smartmenus
+
+
+            }); // end rdy
+        </script>
 </body>
-</html>
 
+</html>

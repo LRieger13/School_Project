@@ -7,52 +7,63 @@
 
 /* MODAL */
 /* tried to limit size of text area expansion -- couldn't figure out how
-    moved onto the rest of the requirements */
+    moved onto the rest of the requirements 
 .contact-modal {
     background-color: rgba(182,124,0,0.8);
-    backdrop-filter: blur(8px);
-	width: 100%;
-	height: 100%;
+	margin-left: 100px;
+	padding: 5px 0px;
+	width: 25vw;
+	height: 25vh;
 	position: absolute;
-	top: 0;
+	bottom: 0;
+	left: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	display: none;
-}
+}*/
 .contact-modal-content {
-    background-color: #1c1c49;
-    margin-left: 5px;
-	width: 600px;
-	height: 500px;
+	background-color: #1c1c49;
+	backdrop-filter: blur(8px);
+	width: 100%;
+	height: 100%;
 	opacity: 1;
 	font-family: 'Josefin Sans', sans-serif;
 	color: #f9da5c;
+	width: 75vw;
+	height: 40vh;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	display: inline-block;
+	justify-content: left;
+	align-items: left;
 }
 .contact-modal-content #open {
-	background-color: #322c2c;
+	background-color: transparent;
 	font-size: x-large;
-	color: #e9e7da;
-	border: 3px double #f9da5c;
+	color: #eebb22;
+	border: 5px double #f9da5c;
 	font-family: artDeco;
 }
 .contact-modal-content a {
 	font-size: xx-small;
-	color: #f9da5c;
+	color: #eebb22;
 	text-decoration: none;
 }
 input {
 	display: inline-block;
-	width: 50%;
-	margin: 5px auto;
+	width: 20%;
+	margin-bottom: 15px;
+	margin: 10px;
 }
 .contact-modal-content .result {
 	font-family: 'Josefin', sans-serif;
 	font-size: 10px;
-	color: #f9da5c;
+	color: #7b1a28;
+	position: fixed;
 }
 .contact-modal-content .close {
-	position: absolute;
+	position: relative;
 	top: 5px;
 	right: 10px;
 	font-size: 20px;
@@ -60,31 +71,67 @@ input {
 	cursor: pointer;
 }
 .contact-modal .subject {
-    width: 100%;
-    min-height: 5em;
-    max-height: 50vh;
-    overflow: hidden;
+	display: block;
+	width: 600px;
+	margin-bottom: 15px;
+	margin: 10px;
+    overflow: auto;
 }
-
 .contact-modal .frmBtn {
     font-family: artDeco;
     font-size: 25px;
     font-weight: normal;
     color: #f9da5c;
     padding: 10px 20px;
-    width: 50%;
+	width: 30px;
+	margin-top: 50px;
+	margin-left: 500px;
     background-color: transparent;
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 5px double #b67c00;
 }
-
 .contact-modal .reset {
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
     font-size: 10px;
     font-weight: bold;
     color: #b67c00;
-    width: 75px;
+	width: 50px;
+	display: flex;
+	position: absolute;
 }
+
+#labelBlock {
+	text-transform: uppercase;
+	font-weight: bold;	
+	display: block;
+	padding-bottom: 0 !important;
+	clear: both;
+	margin-top: 10px;
+}
+.contact-modal-content .indent {
+	display: block;
+	border: 2px solid #f9da5c;
+	margin: 100px;
+	width: 200px;
+	margin-top: -200px;
+	clear: both;
+	color: #eebb22;
+	text-transform: uppercase;
+	font-weight: bold;	
+	display: block;
+	clear: both;
+}
+.contact-modal-content .button {
+	display: block;
+	margin-bottom: 200px;
+	clear: both;
+	color: #eebb22;
+	display: block;
+	clear: both;
+}
+
+
+

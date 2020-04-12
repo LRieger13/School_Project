@@ -26,6 +26,7 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
     <!-- CSS -->
     <link href="smartmenus/sm-core-css.css" rel="stylesheet">
     <link href="smartmenus/sm-blue.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.min.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
             <div class="container">
                 <div class="masthead clarfix">
                     <div class="container inner">
-                        <img class="masthead-brand" src="another.png" style="width:100px;">
+                        <img class="masthead-brand" src="another.png" id="logo" alt="flapper cartoon illustration" style="width:100px; display: none;">
                         <!-- NAV -->
                         <ul class="sm sm-blue">
                             <li><a href="index.html">Home</a></li>
@@ -56,10 +57,41 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
                 <!--BANNER / CAROUSEL / BODY-->
                 <div class="inner cover">
                     <h1 class="cover-heading">Gallery</h1>
-                    <p class="lead"> Subtitle
+                    <p class="lead"> 
                     </p>
                 </div>
+                <div class="content">
+                    <div class="thing1">
+                        <!-- fancybox -->
+                        <a href="Img/dog.jpg" data-fancybox="gallery"
+                            data-caption="1920s Slang NoteCard 'Hair of the Dog'">
+                            <img src="Img/dog_sm.jpg" alt="1920s Slang NoteCard 'Hair of the Dog'">
+                        </a>
 
+                        <a href="Img/bank.jpg" data-fancybox="gallery"
+                            data-caption="1920s Slang NoteCard 'Bank is Closed'">
+                            <img src="Img/bank_sm.jpg" alt="1920s Slang NoteCard 'Bank is Closed'">
+                        </a>
+
+                        <a href="Img/beef.jpg" data-fancybox="gallery" data-caption="1920s Slang NoteCard 'Beef'">
+                            <img src="Img/beef_sm.jpg" alt="1920s Slang NoteCard 'Beef'">
+                        </a>
+
+                        <a href="Img/flyboy.jpg" data-fancybox="gallery" data-caption="1920s Slang NoteCard 'Fly Boy'">
+                            <img src="Img/flyboy_sm.jpg" alt="1920s Slang NoteCard 'Fly Boy'">
+                        </a>
+
+                        <a href="Img/cat.jpg" data-fancybox="gallery"
+                            data-caption="1920s Slang NoteCard 'Cats Pajamas'">
+                            <img src="Img/cat_sm.jpg" alt="1920s Slang NoteCard 'Cats Pajamas'">
+                        </a>
+
+                        <a href="Img/cheese.jpg" data-fancybox="gallery"
+                            data-caption="1920s Slang NoteCard 'Big Cheese'">
+                            <img src="Img/cheese_sm.jpg" alt="1920s Slang NoteCard 'Big Cheese'">
+                        </a>
+                    </div>
+                </div>
             </div>
             <!--END CONTANER-->
         </div>
@@ -78,8 +110,26 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
     <!-- jQuery -->
     <script src="https://kit.fontawesome.com/6bb03a50c0.js" crossorigin="anonymous"></script>
     <script src="smartmenus/jquery.smartmenus.min.js"></script>
+    <script src="fancybox/jquery.fancybox.min.js"></script>
     <script>
         $(document).ready(function () {
+            $("#logo").fadeIn(2000);
+
+            $('.thing1').fancybox({
+
+                selector: '[data-fancybox="gallery"]',
+                loop: true,
+                buttons: [
+                    'slideShow',
+                    'fullScreen',
+                    'thumbs',
+                    'share',
+                    'download',
+                    'zoom',
+                    'close'
+                ]
+            }); // end fancybox
+
             $('.sm').smartmenus({
 
                 showFunction: function ($ul, complete) { $ul.slideDown(250, complete); },
@@ -87,6 +137,9 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
                 hideFunction: function ($ul, complete) { $ul.slideUp(250, complete); }
 
             }); // end smartmenus
+
+            /// GALLERY FANCYBOX
+
 
         }); // end ready
 

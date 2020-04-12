@@ -5,9 +5,9 @@ document.getElementById("button").addEventListener('click', function () {
 document.querySelector(".close").addEventListener('click', function () {
     document.querySelector('.contact-modal').style.display = 'none';
 });
+/* 
 
-
-/// VALIDATE FORM
+/// VALIDATE FORM 
 function validateForm() {
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
@@ -56,6 +56,6 @@ function resultsMsg(s) {
 
 } // end function
 
-
+*/
 
 
