@@ -1,2 +1,2 @@
 # Bootstrap_Project
- WBG project learning bootstrap.
+ WBG project learning JavaScript, jQuery and Bootstrap.
