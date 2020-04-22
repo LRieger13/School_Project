@@ -159,12 +159,19 @@ input {
 .cover-heading {
 	font-family: artDeco;
 	font-size: 100px;
+	font-weight: normal;
 	color: #eebb22;
+}
+.cover-subheading {
+	font-family: artDeco;
+	font-size: 50px;
+	font-weight: normal;
+	color: #2c50c5;
 }
 .lead {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 25px;
-	color: #ba8623;
+	color: #eebb22;
 }
 @font-face {
 	font-family: artDeco;
@@ -175,12 +182,12 @@ input {
 	color: #cc7d63;
 }
 .lead dt {
-	font-size: x-large;
-	color: #ba5705;
+	font-size: 20px;
+	color: #2c50c5;
 	
 }
 .lead dl {
-	font-size: small;
+	font-size: 12px;
 	color: #b8b8b8;
 	line-height: 5px;
 }
