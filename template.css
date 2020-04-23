@@ -238,6 +238,11 @@ input {
 	font-family: 'Josefin Sans', sans-serif;
 	color: #2a49f8;
 }
+.headers {
+	display: inline-block;
+	float: right;
+	margin-top: 15em;
+}
 .card-title {
 	font-family: artDeco;
 	font-weight: normal;
@@ -269,14 +274,19 @@ input {
 	justify-content: center;
 }
 .card {
-	margin: 5em;
+	margin-top: 30em;
 }
 .row {
 	padding-bottom: 1em;
+	margin-top: -10em;
+	margin-bottom: 10em;
 }
-.col-lg-7 {
-	margin-bottom: 5em;
-	padding: 20px;
+.img-operator {
+	float: left;
+	display: flex;
+	position: absolute;
+	top: 150px;
+	left: 50px;
 }
 
 
