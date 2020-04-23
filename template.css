@@ -198,6 +198,37 @@ input {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
+/* DOCPG */
+.btn-default {
+	color: #03477e;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.btn-default:hover {
+	color: #eebb22;
+}
+.document {
+	font-family: 'Josefin Sans', sans-serif;
+	color: #999;
+	font-size: large;
+	margin: 1em;
+}
+.recite dt {
+	font-size: xx-large;
+	color: #113ac2;
+}
+.recite dd {
+	font-size: large;
+	color: #999;
+	font-family: 'Josefin Sans', sans-serif;
+	font-style: italic;
+}
+.title {
+	font-size: large;
+	color: #f3e66c;
+	font-variant: small-caps;
+}
+
 /* ABOUTPG */
 .font-weight-light {
 	font-family: artDeco;
