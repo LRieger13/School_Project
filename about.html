@@ -53,39 +53,87 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
                     <!--END INNERCONTANER-->
                 </div>
                 <!--END MASTHEAD-->
-                <!--BANNER / CAROUSEL / BODY-->
-                <div class="inner cover">
-                    <h1 class="cover-heading">Leah Rieger's</h1>
-                    <h3 class="cover-subheading">Final Project</h3>
-                    <p class="info">
-                        Salutations and greetings from the new rip-roaring 20's. 100 years later and we've become
-                        quite obsessed with times long passed. The idea of using the 1920's as a theme for this site was just
-                        due to the times in which we live. I went with colors instead of the traditional black & white to give it a 
-                        different feel to it and allow for more creativity. Being someone who has always had a heart that beat for jazz and a soul that craved all things
-                        speakeasy, modernizing this style was a fun personal project.
-                    </p>
-                    <dl class="lead">Requirements to look out for:
-                        <dt>Home Page</dt>
-                        <dl>Click the button below to see a login modal.</dl>
-                        <dl>Pay attention to hover effect.</dl>
-                       <!-- REQUIREMENTS -->
-						<dt>About Page</dt>
-						<dl>Add content to describe individual</dl>
-                       
-                        <dt>Contact Page</dt>
-                        <dl>Keep an eye on that logo! </dl>
-                        <dl>Form & new validation</dl>
-						<dl><b>ADD</b> radio selection group \ checkbox</dl>
-                        
-						<dt>Product</dt>
-                        <dl>Gallery Page</dl>
-                        <dl>Check out that fancybox!</dl>
-                    </dl>
-                    <p class="lead">
-                        <a href="#" id="button" onclick="loginBox();" class="btn btn-lg btn-default">Click Me</a>
-                        
-                    </p>
+                <div class="container">
+                    <!--BANNER / CAROUSEL / BODY-->
+                    <div class="row align-items-center my-5">
+                        <div class="col-lg-7">
+                            <img class="img-fluid rounded mb-4 mb-lg-0" src="../../WK8/_images/operatorr.png" alt="1920's Woman Phone Operator">
+                        </div>
+
+                        <!--TEXT-->
+                        <div class="col-lg-5">
+                            <h1 class="font-weight-light">Leah Rieger</h1>
+                            <p class="subs">
+                                Web Developer & Administrator
+                            </p>
+                            <a class="btn btn-primary" href="contactUs.html">Contact</a>
+                        </div>
+
+                        <!--CALL TO ACTION WELL-->
+                        <div class="card text-white bg-secondary my-5 py-4 text-center">
+                            <div class="card-body">
+                                <p class="card-info">
+                                    My name is Leah Rieger and I am a Senior at DeVry University’s Bachelor program for Computer Information Systems 
+                                    with a specialization in Web Development and Administration. After dedicating the last few years of forty plus hour weeks, 
+                                    learning multiple programming languages and tools I am now searching for my next challenge in the hopes of expanding my on the 
+                                    job experiences and improving on my skill set for further refinement.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--CARDS-->
+                        <!--GITHUB-->
+                        <div class="row">
+                            <div class="col-md-4 mb-5">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h2 class="card-title">GitHub</h2>
+                                        <p class="card-text">
+                                            This links to my GitHub repository where you are welcome to see some of the projects I have hosted there, including this one!
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="https://github.com/LRieger13" class="btn btn-primary btn-sm">MORE INFO</a>
+                                    </div> 
+                                </div>
+                            </div>
+
+                            <!--WIX-->
+                            <div class="col-md-4 mb-5">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h2 class="card-title">Wix</h2>
+                                        <p class="card-text">
+                                            This links to my personal Wix site. My school project presentations are in the repository and I also have a blog section.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="https://leahrieger.wixsite.com/techfluent-totsie" class="btn btn-primary btn-sm">MORE INFO</a>
+                                    </div> 
+                                </div>
+                            </div>
+
+                            <!--LINKEDIN-->
+                            <div class="col-md-4 mb-5">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h2 class="card-title">LinkedIn</h2>
+                                        <p class="card-text">
+                                            This links to my LinkedIn profile. I have a current resume and snippets of my projects presented here. Feel free to peruse at your leisure.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a href="https://leahrieger.wixsite.com/techfluent-totsie" class="btn btn-primary btn-sm">MORE INFO</a>
+                                    </div> 
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>                   
                 </div>
+                <!-- /.container -->
+
+
                 <!-- FOOTER -->
                 <footer>
                     <div class="foot-info">
@@ -150,23 +198,7 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
     </div>
     <!--END SITE WRAPPER-->
 
-    <div class="bg-modal">
-        <div class="modal-content">
-            <div class="close">+</div>
-            <img src="another.png" style="width: 150px;">
-            <h2>LOGIN</h2>
-            <form>
-                <input type="text" id="name" name="name" placeholder="Name">
-                <input type="text" id="email" name="email" placeholder="Email">
-                <br>
-                <input id="open" type="button" value="Submit" onclick="login();"> &nbsp; &nbsp; <input type="reset"
-                    value="Clear Form">
-            </form>
-            <p class="result"><br>
-                <a href="#">Register</h6>
-            </p>
-        </div>
-    </div>
+
     <!--JQUERY CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
@@ -187,15 +219,6 @@ PROGRAM DESCRIPTION: Course Project Website WBG310
                 hideFunction: function ($ul, complete) { $ul.slideUp(250, complete); }
 
             }); // end smartmenus
-
-            /// CONTACT MODAL 
-
-            document.getElementById("button").addEventListener('click', function () {
-                document.querySelector('.bg-modal').style.display = 'flex';
-            });
-            document.querySelector(".close").addEventListener('click', function () {
-                document.querySelector('.bg-modal').style.display = 'none';
-            });
 
             /// VALIDATE FORM 
             function validate() {

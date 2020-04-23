@@ -198,6 +198,53 @@ input {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
+/* ABOUTPG */
+.font-weight-light {
+	font-family: artDeco;
+	color: #ba8623;
+}
+.subs {
+	font-family: 'Josefin Sans', sans-serif;
+	color: #2a49f8;
+}
+.card-title {
+	font-family: artDeco;
+	font-weight: normal;
+	letter-spacing: 2px;
+}
+.card-text {
+	font-family: 'Josefin Sans', sans-serif;
+	font-variant: small-caps;
+	padding: 10px;
+}
+.card-body {
+	background-color: #3d434b;
+	border: 1px outset #b8b8b8;
+	border-radius: 2px;
+	box-shadow: 0px 5px 10px rgba(255, 221, 169, 0.397);
+}
+.card-footer {
+	background-color: #333333;
+	border: 1px outset #b8b8b8;
+	padding: 10px;
+	border-radius: 2px;
+	box-shadow: 0px 5px 10px rgba(255, 221, 169, 0.397);
+}
+.card-info {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: small;
+	line-height: 1.5em;
+	padding: 5px;
+	justify-content: center;
+}
+.card {
+	margin: 5em;
+}
+.row {
+	padding-bottom: 1em;
+}
+
+
 /* FOOTER */
 footer {
 	display: flex;
