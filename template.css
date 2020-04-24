@@ -3,7 +3,6 @@
 JUST HAVE A NEW APPROACH -- AS SEEN ON LANDING PAGE. USING TEMPLATE TO 
 RESTRUCTURE.
 */
-
 html, body {
 	height: 100%;
 	background-color: #0d1018;
@@ -235,18 +234,20 @@ input {
 	color: #ba8623;
 }
 .subs {
+	margin-bottom: 10em;
 	font-family: 'Josefin Sans', sans-serif;
 	color: #2a49f8;
 }
-.headers {
+.card-deck {
+	max-width: 250px;
 	display: inline-block;
-	float: right;
-	margin-top: 15em;
+	align-items: center;
 }
 .card-title {
 	font-family: artDeco;
 	font-weight: normal;
 	letter-spacing: 2px;
+	font-size: 3em;
 }
 .card-text {
 	font-family: 'Josefin Sans', sans-serif;
@@ -273,21 +274,44 @@ input {
 	padding: 5px;
 	justify-content: center;
 }
-.card {
-	margin-top: 30em;
+.headers {
+	margin-top: 5em;
+	margin-bottom: 5em;
 }
-.row {
-	padding-bottom: 1em;
-	margin-top: -10em;
-	margin-bottom: 10em;
+.card {
+	margin-top: 5em;
+	margin-bottom: 5em;
+}
+.column {
+	float: left;
+	width: 25%;
+	padding: 0 10px;
+}
+/* Remove extra left and right margins, due to padding in columns */
+.row-info {margin: 0 -5px;}
+/* Clear floats after the columns */
+.row-info:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color:#a07119;
 }
 .img-operator {
-	float: left;
-	display: flex;
-	position: absolute;
-	top: 150px;
-	left: 50px;
+	display: block;
+	top: 0px;
+	left: 25px;
+	width: 550px;
 }
+.text-muted {
+	color: #98a2b1;
+}
+
 
 
 /* FOOTER */
