@@ -354,6 +354,7 @@ footer h5 {
 }
 footer a {
 	color: #617f8d;
+	font-size: 8px;
 	text-decoration: none;
 	font-family: 'Josefin Sans', sans-serif;
 }
